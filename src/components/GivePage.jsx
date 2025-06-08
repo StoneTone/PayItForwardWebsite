@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const GivePage = () => {
   return (
-    <div className="min-h-screen bg-green-700">
+    <div className="min-h-screen bg-blue-200">
       {/* Navigation */}
       <nav className="bg-black text-white px-6 py-3">
         <div className="flex space-x-8">
@@ -18,8 +18,12 @@ const GivePage = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="flex items-start space-x-8">
           {/* Placeholder Image */}
-          <div className="w-64 h-48 bg-white border border-gray-300 flex items-center justify-center text-gray-500">
-            Keep items out of our landfills
+          <div className="w-80 h-80 bg-white border border-gray-300 flex items-center justify-center text-gray-500">
+          <img 
+              src="/donate.jpg" 
+              alt="Venmo QR Code" 
+              className="w-full h-full object-contain"
+            />
           </div>
           
           {/* Give Content */}

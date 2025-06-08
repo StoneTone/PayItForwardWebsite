@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const OurStoryPage = () => {
   return (
-    <div className="min-h-screen bg-green-100">
+    <div className="min-h-screen bg-blue-50">
       {/* Navigation */}
       <nav className="bg-black text-white px-6 py-3">
         <div className="flex space-x-8">

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-green-100">
+    <div className="min-h-screen bg-blue-50">
       {/* Navigation */}
       <nav className="bg-black text-white px-6 py-3">
         <div className="flex space-x-8">
@@ -29,13 +29,19 @@ const ContactPage = () => {
             
             <div className="space-y-6">
               <div>
-                <p className="font-semibold text-gray-800">Jessica Hicks, President</p>
-                <p className="text-gray-700">Email: Djodhicks15@gmail.com</p>
-                <p className="text-gray-700">Ph: 952-240-1316</p>
+                <p className="font-semibold text-gray-800">Donna M. Voetberg, President</p>
+                <p className="text-gray-700">Email: payitforwardtristate@gmail.com</p>
+                <p className="text-gray-700">Ph: 507-220-1194</p>
               </div>
               
               <div>
-                <p className="font-semibold text-gray-800">Vice President: Looking for a Vice President?</p>
+                <p className="font-semibold text-gray-800">Vice President: Looking for a Vice President</p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-800">Tina Hyronemus, Admin NW Iowa</p>
+                <p className="text-gray-700">Email: thyronemus@yahoo.com</p>
+                <p className="text-gray-700">Ph: 712-470-3479</p>
               </div>
               
               <div>
@@ -43,17 +49,19 @@ const ContactPage = () => {
                 <p className="text-gray-700">Email: Pam.wendland@gmail.com</p>
                 <p className="text-gray-700">Ph: 507-360-9100</p>
               </div>
+
+              <div>
+                <p className="font-semibold text-gray-800">Cara Karber, Fundraising Director</p>
+                <p className="text-gray-700">Email: carakarber2455@gmail.com</p>
+                <p className="text-gray-700">Ph: 605-951-5666</p>
+              </div>
               
               <div>
-                <p className="font-semibold text-gray-800">Donna Voetberg, Secretary</p>
-                <p className="text-gray-700">Email: payitforwardtristate@gmail.com</p>
-                <p className="text-gray-700">Ph: 507-220-1194</p>
+                <p className="font-semibold text-gray-800">Angel Hiykel, Secretary Interim</p>
+                <p className="text-gray-700">Email: angelhiykel16@gmail.com</p>
+                <p className="text-gray-700">Ph: 712-830-3288</p>
               </div>
               
-              <div className="pt-4">
-                <p className="text-gray-700 italic">Team Leaders information available under volunteer section.</p>
-                <p className="text-gray-700 italic">Arianna Santos will do a page</p>
-              </div>
             </div>
           </div>
         </div>
