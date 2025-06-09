@@ -75,11 +75,20 @@ const GivePage = () => {
             </div>
             
             <div className="bg-teal-600 text-white p-6 sm:p-8 rounded-2xl shadow-xl">
-              <p className="font-semibold mb-2 text-lg sm:text-xl">Pay It Forward Tri-State, Inc.</p>
-              <div className="bg-teal-600 text-white px-4 py-2 rounded-lg inline-block mb-4">
-                <p className="text-base sm:text-lg font-medium">501(c)3 EIN: 93-2407035</p>
+              <div className="mb-6">
+                <p className="text-lg sm:text-xl text-teal-100 mb-2">Checks can be mailed to:</p>
+                <p className="font-bold text-xl sm:text-2xl mb-4">Pay It Forward Tri-State, Inc.</p>
+                <div className="bg-teal-700 text-white px-4 py-3 rounded-lg inline-block mb-4">
+                  <p className="text-base sm:text-lg font-medium">501(c)3 EIN: 93-2407035</p>
+                </div>
               </div>
-              <p className="text-base sm:text-lg text-teal-100">Make a donation here or elsewhere</p>
+              
+              <div className="border-t border-teal-500 pt-4">
+                <h3 className="font-semibold text-lg sm:text-xl mb-3 text-white">Additional Information:</h3>
+                <p className="text-base sm:text-lg text-teal-100 leading-relaxed">
+                  Please specify if you would like your gift to go towards a certain area, such as <span className="font-medium text-white">food</span> or <span className="font-medium text-white">dental care</span>, on your check or Venmo transaction.
+                </p>
+              </div>
             </div>
           </div>
         </div>

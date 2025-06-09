@@ -21,12 +21,12 @@ const Homepage = () => {
       }
 
       try {
-        const centerCoordinates = { lat: 43.654, lng: -96.075 }; // Coordinates for Magnolia, MN
+        const centerCoordinates = { lat: 43.654, lng: -96.075 };
 
         const map = new window.google.maps.Map(mapElement, {
           center: centerCoordinates,
-          zoom: window.innerWidth < 768 ? 6 : 7, // Adjust zoom for mobile
-          mapId: "DEMO_MAP_ID", // Required for AdvancedMarkerElement
+          zoom: window.innerWidth < 768 ? 6 : 7, 
+          mapId: "DEMO_MAP_ID",
         });
 
         // Add a circle to represent the service area
@@ -38,7 +38,7 @@ const Homepage = () => {
           fillOpacity: 0.35,
           map,
           center: centerCoordinates,
-          radius: 96560, // Radius in meters (60 miles = ~96,560 meters)
+          radius: 96560, 
         });
 
         // Use AdvancedMarkerElement if available, otherwise fall back to regular Marker
