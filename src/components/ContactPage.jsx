@@ -85,6 +85,12 @@ const ContactPage = () => {
               </div>
 
               <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
+                <p className="font-semibold text-teal-700 text-lg sm:text-xl mb-1">Bryan Voetberg, Transportation Director</p>
+                <p className="text-sm sm:text-base text-slate-600">Email: payitforwardtristate@gmail.com</p>
+                <p className="text-sm sm:text-base text-slate-600">Ph: 507-290-4328</p>
+              </div>
+
+              <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
                 <p className="font-semibold text-teal-700 text-lg sm:text-xl mb-1">Cara Karber, Fundraising Director</p>
                 <p className="text-sm sm:text-base text-slate-600">Email: carakarber2455@gmail.com</p>
                 <p className="text-sm sm:text-base text-slate-600">Ph: 605-951-5666</p>

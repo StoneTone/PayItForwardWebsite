@@ -49,10 +49,14 @@ const OurStoryPage = () => {
 
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-16">
         <div className="flex flex-col lg:flex-row items-start mb-8 sm:mb-16">
-          {/* Placeholder Image */}
+          {/* Michael's Photo */}
           <div className="w-full lg:w-80 h-64 lg:h-80 mb-6 sm:mb-8 lg:mb-0 lg:mr-12 flex-shrink-0">
-            <div className="w-full h-full bg-white rounded-xl shadow-xl flex items-center justify-center border-4 border-teal-200 text-slate-500">
-              Photo, quote, etc.
+            <div className="w-full h-full bg-white rounded-xl shadow-xl flex items-center justify-center overflow-hidden p-4">
+              <img 
+                src="/michael-ourstory.jpg" 
+                alt="Michael Dale Voetberg" 
+                className="w-full h-full object-contain border-4 border-teal-200 rounded-lg"
+              />
             </div>
           </div>
           

@@ -78,6 +78,7 @@ const GivePage = () => {
               <div className="mb-6">
                 <p className="text-lg sm:text-xl text-teal-100 mb-2">Checks can be mailed to:</p>
                 <p className="font-bold text-xl sm:text-2xl mb-4">Pay It Forward Tri-State, Inc.</p>
+                <p className="font-bold text-xl sm:text-2xl mb-4">P.O. Box 33 Magnolia, MN 56158</p>
                 <div className="bg-teal-700 text-white px-4 py-3 rounded-lg inline-block mb-4">
                   <p className="text-base sm:text-lg font-medium">501(c)3 EIN: 93-2407035</p>
                 </div>
