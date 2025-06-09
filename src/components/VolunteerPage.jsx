@@ -1,48 +1,82 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 const VolunteerPage = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <div className="min-h-screen bg-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-teal-50">
       {/* Navigation */}
-      <nav className="bg-black text-white px-6 py-3">
-        <div className="flex space-x-8">
-          <Link to="/" className="hover:text-gray-300">Pay It Forward Tri-State, Inc.</Link>
-          <Link to="/our-story" className="hover:text-gray-300">Our Story</Link>
-          <Link to="/volunteer" className="hover:text-gray-300">Volunteer</Link>
-          <Link to="/give" className="hover:text-gray-300">Give</Link>
-          <Link to="/contact" className="hover:text-gray-300">Contact Us</Link>
+      <nav className="bg-slate-800 text-white px-4 sm:px-6 py-4 shadow-lg relative">
+        <div className="container mx-auto flex justify-between items-center">
+          <a href="/" className="text-lg sm:text-xl font-bold tracking-wide hover:text-teal-200 transition-colors">
+            Pay It Forward Tri-State, Inc.
+          </a>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-6">
+            <a href="/our-story" className="hover:text-teal-200 transition-colors">Our Story</a>
+            <a href="/volunteer" className="hover:text-teal-200 transition-colors">Volunteer</a>
+            <a href="/give" className="hover:text-teal-200 transition-colors">Give</a>
+            <a href="/contact" className="hover:text-teal-200 transition-colors">Contact Us</a>
+          </div>
+
+          {/* Mobile Hamburger Button */}
+          <button 
+            onClick={toggleMobileMenu}
+            className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 hover:bg-slate-700 rounded transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            <span className={`block w-6 h-0.5 bg-white transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-white transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-white transition-transform duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={`md:hidden absolute top-full left-0 right-0 bg-slate-800 border-t border-slate-700 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+          <div className="px-4 py-2 space-y-1">
+            <a href="/our-story" className="block py-3 px-2 text-white hover:text-teal-200 hover:bg-slate-700 rounded transition-colors">Our Story</a>
+            <a href="/volunteer" className="block py-3 px-2 text-white hover:text-teal-200 hover:bg-slate-700 rounded transition-colors">Volunteer</a>
+            <a href="/give" className="block py-3 px-2 text-white hover:text-teal-200 hover:bg-slate-700 rounded transition-colors">Give</a>
+            <a href="/contact" className="block py-3 px-2 text-white hover:text-teal-200 hover:bg-slate-700 rounded transition-colors">Contact Us</a>
+          </div>
         </div>
       </nav>
 
-      <div className="container mx-auto px-6 py-12">
-        <div className="flex items-start space-x-8">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-16">
+        <div className="flex flex-col lg:flex-row items-start mb-8 sm:mb-16">
           {/* Volunteer Call-to-Action */}
-          <div className="w-64 h-48 bg-white border border-gray-300 flex items-center justify-center p-6 text-center">
-            <div>
-              <p className="text-gray-700 mb-4">Do you have a service that you would like to share with others?</p>
-              <p className="font-semibold text-gray-800">Join one of our teams.</p>
+          <div className="w-full lg:w-80 h-64 lg:h-80 mb-6 sm:mb-8 lg:mb-0 lg:mr-12 flex-shrink-0">
+            <div className="w-full h-full bg-white rounded-xl shadow-xl flex items-center justify-center border-4 border-teal-200 p-6 text-center">
+              <div className="text-slate-700">
+                <p className="text-sm sm:text-base mb-4">Do you have a service that you would like to share with others?</p>
+                <p className="font-semibold text-teal-700 text-lg">Please reach out to one of our Admins or join one of our existing teams!</p>
+              </div>
             </div>
           </div>
           
           {/* Volunteer Information */}
-          <div className="flex-1">
-            <h1 className="text-3xl font-bold mb-6 text-gray-800">Volunteer</h1>
+          <div className="flex-1 text-slate-700">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-6 sm:mb-8 text-teal-700 leading-tight">Volunteer</h1>
             
-            <div className="space-y-6">
-              <div>
-                <h2 className="text-xl font-semibold mb-2 text-gray-800">Transportation</h2>
-                <p className="text-gray-700 mb-1">The Transportation team is led by Lineka L. Nelson. She is in charge of picking up and delivering donations. If you would like to help others by transporting donations this is the group for you.</p>
+            <div className="space-y-4 sm:space-y-6">
+              <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
+                <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-teal-700">Transportation</h2>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">The Transportation team is led by Bryan Voetberg. He is in charge of picking up and delivering donations. If you would like to help others by transporting donations this is the group for you.</p>
               </div>
               
-              <div>
-                <h2 className="text-xl font-semibold mb-2 text-gray-800">Fundraising</h2>
-                <p className="text-gray-700 mb-1">The Fundraising team is led by Cara Karber. She is extremely knowledgeable in this area and leads this group in finding unique ways to raise money to help those in need. Cara is open to all ideas from those who join her team.</p>
+              <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
+                <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-teal-700">Fundraising</h2>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">The Fundraising team is led by Cara Karber. She is extremely knowledgeable in this area and leads this group in finding unique ways to raise money to help those in need. Cara is open to all ideas from those who join her team.</p>
               </div>
               
-              <div>
-                <h2 className="text-xl font-semibold mb-2 text-gray-800">Donation Organizing</h2>
-                <p className="text-gray-700 mb-1">The Donation Organizing team is led by Liz Mckee. This team assists with organizing donated items to be listed for free. We encourage people to collect items they need or possibly just like to keep items out of the landfill.</p>
+              <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
+                <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-teal-700">Donation Organizing</h2>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">The Donation Organizing team is led by Liz Mckee. This team assists with organizing donated items to be listed for free. We encourage people to collect items they need or possibly just like to keep items out of the landfill.</p>
               </div>
             </div>
           </div>
