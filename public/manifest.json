@@ -1,0 +1,21 @@
+{
+  "name": "Pay It Forward Tri-State, Inc.",
+  "short_name": "Pay It Forward",
+  "description": "The hands & feet of Jesus Christ - Serving the Tri-State Area since 2023, connecting communities with needed resources and support.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0d9488",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["nonprofit", "charity", "community"],
+  "icons": [
+    {
+      "src": "/logo-cropped.jpg",
+      "sizes": "180x180",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
