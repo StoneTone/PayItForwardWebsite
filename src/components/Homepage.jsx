@@ -33,7 +33,7 @@ const Homepage = () => {
             <div className="space-y-4 sm:space-y-6 lg:space-y-8">
               <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-teal-700">Mindful assistance for those in need</h2>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Are you in need of something, but just don't like to ask? Send us a personal message or post anonymously!</p>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Are you in need of something, but just don't like to ask? Send us an email or post anonymously!</p>
               </div>
               
               <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
@@ -44,11 +44,6 @@ const Homepage = () => {
               <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-teal-700">Providing mental health awareness & suicide prevention</h2>
                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Are you struggling with mental health or thoughts of suicide? Reach out and we will help you with that first step!</p>
-              </div>
-              
-              <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
-                <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-teal-700">Pay it forward</h2>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Has someone done something for you and you want to pay it forward? Review our posts and pay forward what you can!</p>
               </div>
               
               <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
@@ -65,8 +60,7 @@ const Homepage = () => {
             "There will never be two eyes that you look into that God does not love."
           </blockquote>
           <div className="mt-4 sm:mt-6 text-teal-100">
-            <p className="text-lg sm:text-xl">- Donna Votberg</p>
-            <p className="text-base sm:text-lg opacity-75">(Founder)</p>
+            <p className="text-lg sm:text-xl">- Donna Voetberg (Founder)</p>
           </div>
         </div>
 
@@ -105,7 +99,7 @@ const Homepage = () => {
             <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-slate-800">Make a donation</h3>
             <p className="text-sm sm:text-base text-slate-600 mb-4 leading-relaxed">Make a donation here or elsewhere</p>
             <a 
-              href="/give" 
+              href="/donate" 
               className="inline-block bg-teal-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-teal-700 transition-colors text-sm sm:text-base font-medium"
             >
               Learn more about giving

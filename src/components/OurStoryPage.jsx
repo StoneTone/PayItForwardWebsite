@@ -9,7 +9,10 @@ const OurStoryPage = () => {
       <Navigation />
 
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-16 flex-grow">
-        <div className="flex flex-col lg:flex-row items-start mb-8 sm:mb-16">
+        {/* Page Title */}
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-6 sm:mb-8 text-teal-700 leading-tight">Our Story</h1>
+        
+        <div className="flex flex-col lg:flex-row items-start mb-8 sm:mb-16 mt-8">
           {/* Michael's Photo */}
           <div className="w-full lg:w-80 h-64 lg:h-80 mb-6 sm:mb-8 lg:mb-0 lg:mr-12 flex-shrink-0">
             <div className="w-full h-full bg-white rounded-xl shadow-xl flex items-center justify-center overflow-hidden p-4">
@@ -23,8 +26,6 @@ const OurStoryPage = () => {
           
           {/* Our Story Content */}
           <div className="flex-1 text-slate-700">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-6 sm:mb-8 text-teal-700 leading-tight">Our Story</h1>
-            
             <div className="bg-white p-6 sm:p-8 lg:p-12 rounded-xl shadow-md border-l-4 border-teal-500">
               <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-slate-600 leading-relaxed">
                 <p>We started this group in honor of our son Michael Dale Voetberg. He passed away at 34 years old on March 13, 2019 by suicide. You can read more about our grief journey on our Life without Michael Facebook page.</p>
@@ -35,7 +36,7 @@ const OurStoryPage = () => {
                 
                 <p>Our focus is within a 60 mile radius of Magnolia, MN, but we will not turn anyone away.</p>
                 
-                <p>Beginning the week of October 16, 2024 we officially spent the remainder of Michael's entire inheritance! We feel good about our decision of helping others with the funds and pray that the group will continue to carry on Lord willing.</p>
+                <p>Beginning the week of October 16, 2024 we officially spent the remainder of Michael's entire inheritance! We feel good about our decision of helping others with the funds and pray that the group will continue to carry on.</p>
                 
                 <p>We recognized the need for donations to keep our 501(c)3 nonprofit going and the need for extra volunteers to make it successful, so we initiated our Fundraising Team, Transportation Team and Donation Management Team.</p>
                 

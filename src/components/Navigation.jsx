@@ -18,7 +18,7 @@ const Navigation = () => {
         <div className="hidden md:flex space-x-6">
           <a href="/our-story" className="hover:text-teal-200 transition-colors">Our Story</a>
           <a href="/volunteer" className="hover:text-teal-200 transition-colors">Volunteer</a>
-          <a href="/give" className="hover:text-teal-200 transition-colors">Give</a>
+          <a href="/donate" className="hover:text-teal-200 transition-colors">Donate</a>
           <a href="/contact" className="hover:text-teal-200 transition-colors">Contact Us</a>
         </div>
 
@@ -39,7 +39,7 @@ const Navigation = () => {
         <div className="px-4 py-2 space-y-1">
           <a href="/our-story" className="block py-3 px-2 text-white hover:text-teal-200 hover:bg-slate-700 rounded transition-colors">Our Story</a>
           <a href="/volunteer" className="block py-3 px-2 text-white hover:text-teal-200 hover:bg-slate-700 rounded transition-colors">Volunteer</a>
-          <a href="/give" className="block py-3 px-2 text-white hover:text-teal-200 hover:bg-slate-700 rounded transition-colors">Give</a>
+          <a href="/donate" className="block py-3 px-2 text-white hover:text-teal-200 hover:bg-slate-700 rounded transition-colors">Donate</a>
           <a href="/contact" className="block py-3 px-2 text-white hover:text-teal-200 hover:bg-slate-700 rounded transition-colors">Contact Us</a>
         </div>
       </div>

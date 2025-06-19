@@ -53,7 +53,7 @@ src/
     Homepage.jsx
     OurStoryPage.jsx
     VolunteerPage.jsx
-    GivePage.jsx
+    DonatePage.jsx
     ContactPage.jsx
   App.jsx
   main.jsx

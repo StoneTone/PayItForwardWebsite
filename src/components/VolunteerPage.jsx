@@ -9,9 +9,9 @@ const VolunteerPage = () => {
       <Navigation />
 
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-16 flex-grow">
-        <div className="flex flex-col lg:flex-row items-start mb-8 sm:mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-stretch mb-8 sm:mb-16">
           {/* Volunteer Call-to-Action */}
-          <div className="w-full lg:w-80 h-64 lg:h-80 mb-6 sm:mb-8 lg:mb-0 lg:mr-12 flex-shrink-0">
+          <div className="w-full lg:w-80 h-64 lg:h-[548px] mb-6 sm:mb-8 lg:mb-0 lg:mr-12 flex-shrink-0">
             <div className="w-full h-full bg-white rounded-xl shadow-xl flex items-center justify-center border-4 border-teal-200 p-6 text-center">
               <div className="text-slate-700">
                 <p className="text-sm sm:text-base mb-4">Do you have a service that you would like to share with others?</p>
@@ -37,7 +37,7 @@ const VolunteerPage = () => {
               
               <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-teal-700">Donation Organizing</h2>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">The Donation Organizing team is led by Liz Mckee. This team assists with organizing donated items to be listed for free. We encourage people to collect items they need or possibly just like to keep items out of the landfill.</p>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">The Donation Organizing team is led by Donna Voetberg. This team assists with organizing donated items to be listed for free. We encourage people to collect items they need or possibly just like to keep items out of the landfill.</p>
               </div>
             </div>
           </div>
