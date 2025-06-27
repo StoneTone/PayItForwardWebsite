@@ -10,11 +10,13 @@ const ContactPage = () => {
 
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-16 flex-grow">
         <div className="flex flex-col lg:flex-row items-start mb-8 sm:mb-16">
-          {/* Placeholder Image */}
+          {/* Contact Image */}
           <div className="w-full lg:w-80 h-64 lg:h-80 mb-6 sm:mb-8 lg:mb-0 lg:mr-12 flex-shrink-0">
-            <div className="w-full h-full bg-white rounded-xl shadow-xl flex items-center justify-center border-4 border-teal-200 text-slate-500">
-              Photo, quote, etc.
-            </div>
+            <img 
+              src="/supported_hands.jpg" 
+              alt="Supported hands representing community support" 
+              className="w-full h-full object-cover rounded-xl shadow-xl border-4 border-teal-200"
+            />
           </div>
           
           {/* Contact Information */}
@@ -30,7 +32,9 @@ const ContactPage = () => {
               </div>
               
               <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
-                <p className="font-semibold text-teal-700 text-lg sm:text-xl">Vice President: Looking for a Vice President</p>
+                <p className="font-semibold text-teal-700 text-lg sm:text-xl mb-1">Cara Karber, Vice President</p>
+                <p className="text-sm sm:text-base text-slate-600">Email: carakarber2455@gmail.com</p>
+                <p className="text-sm sm:text-base text-slate-600">Ph: 605-951-5666</p>
               </div>
 
               <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
@@ -49,12 +53,6 @@ const ContactPage = () => {
                 <p className="font-semibold text-teal-700 text-lg sm:text-xl mb-1">Bryan Voetberg, Transportation Director</p>
                 <p className="text-sm sm:text-base text-slate-600">Email: payitforwardtristate@gmail.com</p>
                 <p className="text-sm sm:text-base text-slate-600">Ph: 507-290-4328</p>
-              </div>
-
-              <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
-                <p className="font-semibold text-teal-700 text-lg sm:text-xl mb-1">Cara Karber, Fundraising Director</p>
-                <p className="text-sm sm:text-base text-slate-600">Email: carakarber2455@gmail.com</p>
-                <p className="text-sm sm:text-base text-slate-600">Ph: 605-951-5666</p>
               </div>
               
               <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
