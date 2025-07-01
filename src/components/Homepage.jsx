@@ -57,11 +57,9 @@ const Homepage = () => {
         {/* Mission Statement Section */}
         <div className="bg-teal-600 text-white p-6 sm:p-8 lg:p-12 rounded-2xl shadow-xl mb-8 sm:mb-16 text-center">
           <blockquote className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-light italic leading-relaxed">
-            "There will never be two eyes that you look into that God does not love."
+            "Empowering communities to create a ripple effect of kindness. We gather and channel contributions to meet basic needs, 
+            extend helping hands, and uplift individuals facing adversity — fostering a culture of empathy and compassion that transforms lives."
           </blockquote>
-          <div className="mt-4 sm:mt-6 text-teal-100">
-            <p className="text-lg sm:text-xl">- Donna Voetberg (Founder)</p>
-          </div>
         </div>
 
         {/* Service Area Section */}
@@ -81,18 +79,17 @@ const Homepage = () => {
 
         {/* Bottom Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="h-1 bg-teal-500 rounded-full mb-4 sm:mb-6"></div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-slate-800">Upcoming Events</h3>
-            <div className="text-slate-600">
-              <div className="bg-teal-50 p-4 rounded-lg">
-                <p className="font-semibold text-teal-700 mb-1">Soup Supper & Pie Auction</p>
-                <p className="text-sm">Date and location TBD</p>
-              </div>
-            </div>
-          </div>
+          <FacebookFeed 
+            title="Upcoming Events" 
+            rssUrl="https://fetchrss.com/feed/aF7zk2WHYXGiaGHijGfkl9Qy.rss" 
+            link="https://www.facebook.com/profile.php?id=61577893441856"
+          />
           
-          <FacebookFeed />
+          <FacebookFeed 
+            title="Latest News" 
+            rssUrl="https://fetchrss.com/feed/aF7zk2WHYXGiaGHioG2adQAy.rss" 
+            link="https://www.facebook.com/profile.php?id=61577879582847"
+          />
           
           <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="h-1 bg-teal-500 rounded-full mb-4 sm:mb-6"></div>
