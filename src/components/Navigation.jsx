@@ -45,21 +45,27 @@ const Navigation = () => {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-4">
             {/* Logo/Brand */}
-            <div className="flex items-center">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <a href="/" className="text-slate-800 hover:text-teal-600 transition-colors">
-                    <div className="text-xl font-bold tracking-tight">Pay It Forward</div>
-                    <div className="text-sm text-slate-600 font-medium">Tri-State, Inc.</div>
-                  </a>
+            <a href="/" className="text-slate-800 hover:text-teal-600 transition-colors">
+              <div className="flex items-center">
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M17.5 4.5c-0.7-0.4-1.5-0.7-2.4-0.9C14.4 3.4 13.3 3.3 12 3.3c-1.1 0-2.1 0.1-3.0 0.3
+                          c-0.9 0.2-1.7 0.5-2.4 0.9C5.4 5.2 4.8 6.3 4.8 7.8c0 1.5 1.1 4.8 2.6 7.7
+                          c1.0 2.0 3.1 5.5 5.0 5.5c1.9 0 3.9-3.4 5.0-5.5c1.5-2.9 2.6-6.2 2.6-7.7
+                          C20 6.3 19.4 5.2 17.5 4.5z" />
+                      </svg>
+                  </div>
+                  <div>
+                      <div className="text-xl font-bold tracking-tight">Pay It Forward</div>
+                      <div className="text-sm text-slate-600 font-medium">Tri-State, Inc.</div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
             
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">

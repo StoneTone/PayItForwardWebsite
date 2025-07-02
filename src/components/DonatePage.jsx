@@ -17,10 +17,6 @@ const DonatePage = () => {
               <div className="bg-white p-3 sm:p-4 rounded-lg shadow-md border-l-4 border-teal-500">
                 <p className="text-base sm:text-lg text-slate-600 leading-relaxed">Do you have items that you no longer need, but do not want to throw them or haul them away? We accept donations and will pick up your stuff! Please send us an email at payitforwardtristate@gmail.com</p>
               </div>
-              
-              <div className="bg-white p-3 sm:p-4 rounded-lg shadow-md border-l-4 border-teal-500">
-                <p className="font-semibold text-teal-700 text-base sm:text-lg mb-2">Monetary donations:</p>
-              </div>
             </div>
             
             <div className="w-full max-w-xs lg:w-[250px] h-56 lg:h-[250px] flex-shrink-0 lg:-mt-[3rem]">
