@@ -4,6 +4,7 @@ import OurStoryPage from './components/OurStoryPage'
 import VolunteerPage from './components/VolunteerPage'
 import DonatePage from './components/DonatePage'
 import ContactPage from './components/ContactPage'
+import SuicidePreventionPage from './components/SuicidePreventionPage'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/volunteer" element={<VolunteerPage />} />
         <Route path="/donate" element={<DonatePage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/suicide-prevention" element={<SuicidePreventionPage />} />
       </Routes>
     </Router>
   )

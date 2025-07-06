@@ -57,7 +57,7 @@ const Navigation = () => {
                           c-0.9 0.2-1.7 0.5-2.4 0.9C5.4 5.2 4.8 6.3 4.8 7.8c0 1.5 1.1 4.8 2.6 7.7
                           c1.0 2.0 3.1 5.5 5.0 5.5c1.9 0 3.9-3.4 5.0-5.5c1.5-2.9 2.6-6.2 2.6-7.7
                           C20 6.3 19.4 5.2 17.5 4.5z" />
-                      </svg>
+                    </svg>
                   </div>
                   <div>
                       <div className="text-xl font-bold tracking-tight">Pay It Forward</div>
@@ -75,6 +75,10 @@ const Navigation = () => {
               </a>
               <a href="/volunteer" className="text-slate-700 hover:text-teal-600 font-medium transition-colors relative group">
                 Get Involved
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a href="/suicide-prevention" className="text-slate-700 hover:text-teal-600 font-medium transition-colors relative group">
+                Suicide Prevention
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a href="/contact" className="text-slate-700 hover:text-teal-600 font-medium transition-colors relative group">
@@ -107,13 +111,16 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden bg-white border-t border-slate-200 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+        <div className={`lg:hidden bg-white border-t border-slate-200 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
           <div className="px-4 py-6 space-y-4">
             <a href="/our-story" className="block py-3 px-4 text-slate-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition-colors font-medium">
               Our Story
             </a>
             <a href="/volunteer" className="block py-3 px-4 text-slate-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition-colors font-medium">
               Get Involved
+            </a>
+            <a href="/suicide-prevention" className="block py-3 px-4 text-slate-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition-colors font-medium">
+              Suicide Prevention
             </a>
             <a href="/contact" className="block py-3 px-4 text-slate-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition-colors font-medium">
               Contact Us
