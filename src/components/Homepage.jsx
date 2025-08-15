@@ -17,7 +17,7 @@ const Homepage = () => {
           <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mb-6 sm:mb-8 lg:mb-0 lg:mr-12 flex-shrink-0">
             <div className="w-full h-full bg-white rounded-full shadow-xl flex items-center justify-center border-4 border-teal-200">
               <img 
-                src="/logo-cropped.jpg" 
+                src="/logo-cropped.webp" 
                 alt="Pay It Forward Tri-State Logo" 
                 className="w-3/4 h-3/4 object-contain"
               />

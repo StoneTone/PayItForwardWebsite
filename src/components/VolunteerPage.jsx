@@ -36,8 +36,8 @@ const VolunteerPage = () => {
               </div>
               
               <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border-l-4 border-teal-500">
-                <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-teal-700">Donation Organizing</h2>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">The Donation Organizing team is led by Donna Voetberg. This team assists with organizing donated items to be listed for free. We encourage people to collect items they need or possibly just like to keep items out of the landfill.</p>
+                <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-teal-700">Donation Team</h2>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">The Donation team is led by Tina Hyronemus. This team assists with organizing donated items to be listed for free. We encourage people to collect items they need or possibly just like to keep items out of the landfill.</p>
               </div>
             </div>
           </div>
