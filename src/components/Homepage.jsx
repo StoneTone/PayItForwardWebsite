@@ -81,13 +81,13 @@ const Homepage = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <FacebookFeed 
             title="Upcoming Events" 
-            rssUrl="https://fetchrss.com/feed/aF7zk2WHYXGiaGHijGfkl9Qy.rss" 
+            rssUrl="https://fetchrss.com/feed/1vRIs41DtAOA1vRJ6l7Cu1MQ.rss" 
             link="https://www.facebook.com/profile.php?id=61577893441856"
           />
           
           <FacebookFeed 
             title="Latest News" 
-            rssUrl="https://fetchrss.com/feed/aF7zk2WHYXGiaGHioG2adQAy.rss" 
+            rssUrl="https://fetchrss.com/feed/1vRIs41DtAOA1vRJ7h57J7QQ.rss" 
             link="https://www.facebook.com/profile.php?id=61577879582847"
           />
           
