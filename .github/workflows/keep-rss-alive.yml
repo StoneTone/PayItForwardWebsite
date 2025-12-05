@@ -11,7 +11,9 @@ jobs:
     
     steps:
     - name: Fetch RSS Feeds
+      shell: bash
       run: |
+        set +e  # Don't exit on errors
         echo "🔄 Starting RSS keep-alive process..."
         
         # RSS feed URLs
@@ -61,29 +63,72 @@ jobs:
         success_count=0
         total_count=2
         
+        # Track which feeds succeed/fail
+        failed_feeds=()
+        
         # Fetch both feeds
+        echo "🧪 Testing Upcoming Events Feed..."
         if fetch_feed "$UPCOMING_EVENTS" "Upcoming Events Feed"; then
-          ((success_count++))
+          success_count=$((success_count + 1))
+          echo "  ✅ Upcoming Events Feed is healthy"
+        else
+          failed_feeds+=("Upcoming Events Feed")
+          echo "  ❌ Upcoming Events Feed failed"
         fi
         
         echo "" # Empty line for readability
         
+        echo "🧪 Testing Latest News Feed..."
         if fetch_feed "$LATEST_NEWS" "Latest News Feed"; then
-          ((success_count++))
+          success_count=$((success_count + 1))
+          echo "  ✅ Latest News Feed is healthy"
+        else
+          failed_feeds+=("Latest News Feed")
+          echo "  ❌ Latest News Feed failed"
         fi
         
         echo ""
+        echo "📊 === FINAL RESULTS ==="
         echo "📊 Summary: $success_count/$total_count feeds successfully fetched"
         echo "🕐 Timestamp: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
         
         if [ $success_count -eq $total_count ]; then
-          echo "🎉 All RSS feeds are healthy and active!"
-          exit 0
-        elif [ $success_count -gt 0 ]; then
-          echo "⚠️ Some RSS feeds failed - but at least one is working"
-          echo "💡 This is still success for keeping feeds alive!"
+          echo ""
+          echo "🎉 SUCCESS: All RSS feeds are healthy and active!"
+          echo "✅ Upcoming Events Feed: Working"
+          echo "✅ Latest News Feed: Working"
+          echo ""
+          echo "💡 Both feeds have been pinged and will not be deleted by FetchRSS"
           exit 0
         else
-          echo "🚨 All RSS feeds failed - immediate attention required!"
+          echo ""
+          echo "🚨 FAILURE: One or more RSS feeds are not working properly"
+          echo ""
+          echo "📋 Status breakdown:"
+          if [[ ! " ${failed_feeds[@]} " =~ " Upcoming Events Feed " ]]; then
+            echo "✅ Upcoming Events Feed: Working"
+          else
+            echo "❌ Upcoming Events Feed: FAILED"
+          fi
+          
+          if [[ ! " ${failed_feeds[@]} " =~ " Latest News Feed " ]]; then
+            echo "✅ Latest News Feed: Working"
+          else
+            echo "❌ Latest News Feed: FAILED"
+          fi
+          
+          echo ""
+          echo "🔍 Failed feeds (${#failed_feeds[@]}):"
+          for feed in "${failed_feeds[@]}"; do
+            echo "  • $feed"
+          done
+          
+          echo ""
+          echo "🛠️  Action required:"
+          echo "  1. Check your FetchRSS dashboard"
+          echo "  2. Verify the RSS URLs are still valid"
+          echo "  3. Ensure Facebook pages are still public"
+          echo "  4. Consider recreating failed feeds in FetchRSS"
+          
           exit 1
         fi
