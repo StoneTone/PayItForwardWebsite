@@ -1,0 +1,80 @@
+name: Keep RSS Feeds Alive
+
+on:
+  schedule:
+    - cron: '30 2 */3 * *'
+  workflow_dispatch: # Allows manual triggering from GitHub UI
+
+jobs:
+  keep-feeds-alive:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Fetch RSS Feeds
+      run: |
+        echo "🔄 Starting RSS keep-alive process..."
+        
+        # RSS feed URLs
+        UPCOMING_EVENTS="https://fetchrss.com/feed/1vRIs41DtAOA1vRJ6l7Cu1MQ.rss"
+        LATEST_NEWS="https://fetchrss.com/feed/1vRIs41DtAOA1vRJ7h57J7QQ.rss"
+        
+        # Function to fetch and validate RSS feed
+        fetch_feed() {
+          local url=$1
+          local name=$2
+          
+          echo "📡 Fetching $name..."
+          
+          response=$(curl -s -w "HTTPSTATUS:%{http_code};SIZE:%{size_download}" \
+            -H "User-Agent: PayItForward-KeepAlive/1.0" \
+            -H "Accept: application/xml, text/xml, */*" \
+            --max-time 30 \
+            "$url")
+          
+          http_code=$(echo "$response" | grep -o "HTTPSTATUS:[0-9]*" | cut -d: -f2)
+          size=$(echo "$response" | grep -o "SIZE:[0-9]*" | cut -d: -f2)
+          content=$(echo "$response" | sed 's/HTTPSTATUS:[0-9]*;SIZE:[0-9]*$//')
+          
+          if [ "$http_code" = "200" ]; then
+            if [[ "$content" == *"<rss"* ]] || [[ "$content" == *"<feed"* ]]; then
+              echo "✅ $name: Success (${size} bytes, valid XML)"
+              return 0
+            else
+              echo "⚠️ $name: Response received but invalid XML format"
+              return 1
+            fi
+          else
+            echo "❌ $name: HTTP error $http_code"
+            return 1
+          fi
+        }
+        
+        # Track results
+        success_count=0
+        total_count=2
+        
+        # Fetch both feeds
+        if fetch_feed "$UPCOMING_EVENTS" "Upcoming Events Feed"; then
+          ((success_count++))
+        fi
+        
+        echo "" # Empty line for readability
+        
+        if fetch_feed "$LATEST_NEWS" "Latest News Feed"; then
+          ((success_count++))
+        fi
+        
+        echo ""
+        echo "📊 Summary: $success_count/$total_count feeds successfully fetched"
+        echo "🕐 Timestamp: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+        
+        if [ $success_count -eq $total_count ]; then
+          echo "🎉 All RSS feeds are healthy and active!"
+          exit 0
+        elif [ $success_count -gt 0 ]; then
+          echo "⚠️ Some RSS feeds failed - check FetchRSS dashboard"
+          exit 1
+        else
+          echo "🚨 All RSS feeds failed - immediate attention required!"
+          exit 1
+        fi
